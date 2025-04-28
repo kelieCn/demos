@@ -1,0 +1,25 @@
+{
+  "name": "demos",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.15.4",
+  "type": "module",
+  "description": "各类技术框架使用的 demo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kelie<keliecn720@gmail.com>",
+  "engines": {
+    "node": ">=18.19",
+    "pnpm": ">=8.15.0 <9.0.0"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-scss": "^6.11.1"
+  }
+}
