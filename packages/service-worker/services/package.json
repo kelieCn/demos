@@ -1,24 +1,22 @@
 {
-  "name": "services",
-  "version": "1.0.0",
-  "description": "This project was bootstrapped with Fastify-CLI.",
+  "name": "service-worker-services",
   "type": "module",
-  "main": "app.js",
-  "scripts": {
-    "start": "fastify start -l info ts-node app.ts",
-    "dev": "fastify start -w -l info -P ts-node app.ts"
-  },
-  "keywords": [],
+  "version": "1.0.0",
+  "private": true,
+  "description": "This project was bootstrapped with Fastify-CLI.",
   "author": "kelie<keliecn720@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "keywords": [],
+  "main": "app.ts",
+  "scripts": {
+    "dev": "nodemon --exec node --loader ts-node/esm app.ts"
+  },
   "dependencies": {
-    "fastify": "^5.3.2",
-    "fastify-cli": "^7.4.0"
+    "fastify": "*"
   },
   "devDependencies": {
-    "@types/node": "^22.15.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "*"
   }
 }

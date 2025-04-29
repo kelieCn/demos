@@ -1,3 +1,11 @@
-import { defineConfig } from 'eslint/config'
+import getESLintConfig from '@antfu/eslint-config'
 
-export default defineConfig([])
+export default getESLintConfig(
+  {},
+  {
+    name: 'common',
+    rules: {
+      'no-console': 'off',
+    },
+  },
+)
