@@ -1,0 +1,22 @@
+{
+  "name": "@demos/html-render",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "HTML rendering service using Fastify",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "service.ts",
+  "scripts": {
+    "dev": "nodemon --exec node --loader ts-node/esm service.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "*",
+    "fastify": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  }
+}

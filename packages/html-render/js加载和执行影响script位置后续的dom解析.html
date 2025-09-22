@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">box1</div>
+  <!-- 
+    预期效果：进入页面后，先渲染了 box1 元素，等待 js 资源加载并执行后，才渲染了 box2 元素
+    原因：因为 js 在执行中可能会对之前的元素做一些操作，如果不等待 js 执行完成继续解析dom 的话，可能会出现 dom树解析完了，但是由于 js 的执行又破坏了 dom 树的结构和内容，从而导致需要重新解析 dom 树。
+  -->
+  <script src="http://localhost:3000/js?time=3000"></script>
+  <div class="box2">box2</div>
+</body>
+</html>

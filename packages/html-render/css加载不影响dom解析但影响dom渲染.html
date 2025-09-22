@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /**
+     * 预期效果：进入页面后，控制台先打印了 box1 元素，但是页面上面没有展示任何元素，等待 css 资源返回后，页面才展示了 box1 元素
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log(document.querySelector('.box1'))
+    })
+  </script>
+  <link rel="stylesheet" href="http://localhost:3000/css?time=3000&color=red">
+</head>
+<body>
+  <div class="box1">box1</div>
+</body>
+</html>

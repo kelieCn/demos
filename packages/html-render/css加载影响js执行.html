@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /**
+     * 预期效果：进入页面后，页面和控制台都是控的，等待 css 资源返回后，控制台才打印了 111 和 box1 元素，并且渲染出了 box1 元素
+     * 原因：因为 js 在执行中也有可能去获取、修改元素的样式信息，所以在 js 执行之前，必须等待 css 解析完成。
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log(document.querySelector('.box1'))
+    })
+  </script>
+  <link rel="stylesheet" href="http://localhost:3000/css?time=3000&color=red">
+  <script>
+    console.log('111')
+  </script>
+</head>
+<body>
+  <div class="box1">box1</div>
+</body>
+</html>
