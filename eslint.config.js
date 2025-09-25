@@ -98,9 +98,13 @@ export default defineConfig([
       parser: tsParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: process.cwd(),
+      },
     },
     plugins: {
-      ts: tsPlugin, // TypeScript 支持
+      '@typescript-eslint': tsPlugin, // TypeScript 支持
     },
     rules: {
       '@typescript-eslint/consistent-type-imports': [
