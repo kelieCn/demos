@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    /**
+     * 默认情况下，效果为进入页面 2s 后执行了第二个脚本，3s 后执行了第一个脚本。
+     * 如果将 async 设置为 false，则效果为进入页面 3s 后先执行第一个脚本，再执行第二个脚本。
+     *
+     * 结论：默认情况下添加的脚本，行为跟 <script async> 标签一致。 如果手动设置 async 为 false，则行为跟 <script defer> 标签一致。
+     */
+    function loadScript(src) {
+      const script = document.createElement('script')
+      script.src = src
+      script.async = false
+      document.body.appendChild(script)
+    }
+    loadScript('http://localhost:3000/js?time=3000')
+    loadScript('http://localhost:3000/js?time=2000')
+  </script>
+</body>
+</html>

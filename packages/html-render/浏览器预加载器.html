@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <!-- 
+    预期效果：进入页面后，network 会同时下载这两个 js 资源，但是会在第一个资源下载完成后才执行。
+    原因：当解析器解析到第一个 script 标签时，由于第一个 script 标签会阻塞 dom 的解析，所以第二个 script 标签并不会被解析，但是由于浏览器还有个预加载器，他会在 dom 阻塞的时候，扫描
+    后面的资源，一并进行下载。但是即便第二个 script 标签先下载完，也不会先执行，而是按照 dom 解析的顺序执行，所以会先执行第一个 script 标签。
+  -->
+  <script src="http://localhost:3000/js?time=3000"></script>
+  <script src="http://localhost:3000/js?time=2000"></script>
+</body>
+</html>

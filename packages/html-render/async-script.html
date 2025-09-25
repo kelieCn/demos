@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  </style>
+  <!-- 
+    预期效果：进入页面后，2秒后执行了第三个 script，3秒后后执行第二个 script，4秒后再执行第四个 script，最后控制台打印了 DOMContentLoaded。然后渲染页面。
+    结论：异步脚本在下载过程中不会阻塞 dom 的解析，并且谁先下载完就开始执行谁。
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded')
+    })
+  </script>
+  <script async src="http://localhost:3000/js?time=3000"></script>
+  <script async src="http://localhost:3000/js?time=2000"></script>
+  <script src="http://localhost:3000/js?time=4000"></script>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
