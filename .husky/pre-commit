@@ -1,1 +1,15 @@
+#!/bin/sh
 pnpm run lint-staged
+
+current_branch=$(git symbolic-ref --short HEAD)
+
+# 定义需要禁止直接提交的分支列表
+protected_branches="master main"
+
+for branch in $protected_branches; do
+    if [ "$current_branch" = "$branch" ]; then
+        echo "错误：禁止直接向 '$branch' 分支提交代码。" 
+        echo "请创建一个新分支进行开发，然后通过 Pull Request 合并。"
+        exit 1
+    fi
+done
