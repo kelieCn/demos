@@ -15,7 +15,7 @@ export default defineConfig([
   {
     name: 'common-rules',
     files: [
-      '**/*.html', '**/*.js', '**/*.ts',
+      '**/*.html', '**/*.js', '**/*.ts', '**/*.vue',
     ],
     plugins: {
       html, // HTML 插件用于解析 script 标签
@@ -69,14 +69,7 @@ export default defineConfig([
       'import/newline-after-import': 'error', // 确保导入语句后有空行
       'import/no-duplicates': 'error', // 确保导入语句不重复
       'prefer-const': 'error', // 要求使用 const 声明那些声明后不再被修改的变量
-      'no-unused-vars': [
-        'error',
-        {
-          vars: 'all', // 检查所有变量（包括全局变量）
-          args: 'none', // 不检查函数参数（允许未使用的参数）
-          ignoreRestSiblings: true, // 忽略剩余和解构中未使用的变量
-        },
-      ], // 禁止出现未使用过的变量
+      'no-unused-vars': 'off', // 禁止出现未使用过的变量（已经使用了 unused-imports/no-unused-vars 就足够了）
       'no-var': 'error', // 要求使用 let 或 const 而不是 var
       quotes: ['error', 'single'], // 强制使用单引号
       'unused-imports/no-unused-imports': 'error', // 自动删除未使用的导入语句
@@ -93,7 +86,7 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.ts'], // TypeScript 文件
+    files: ['**/*.ts', '**/*.vue'], // TypeScript 文件
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 'latest',
@@ -101,6 +94,7 @@ export default defineConfig([
       parserOptions: {
         projectService: true,
         tsconfigRootDir: process.cwd(),
+        extraFileExtensions: ['.vue'], // 支持 .vue 文件扩展名（否则 vue 文件中使用 ts 不会应用这个配置）
       },
     },
     plugins: {
@@ -172,6 +166,13 @@ export default defineConfig([
       'vue/dot-notation': ['error', { allowKeywords: true }], // 尽可能使用点表示法访问属性
       'vue/eqeqeq': ['error', 'smart'], // 要求使用 === 和 !==（智能模式）
       'vue/html-indent': ['error', 2], // HTML 模板缩进 2 个空格
+      'vue/script-indent': [
+        'error', 2, {
+          baseIndent: 1, // 基础缩进倍数
+          switchCase: 1, // switch case 缩进倍数
+        },
+      ], // script 标签缩进 2 个空格
+      indent: 'off', // 关闭缩进检查（因为 vue/script-indent 配置的值与 indent 配置的一些信息冲突，所以关闭了通用的配置）
       'vue/html-quotes': ['error', 'double'], // HTML 属性使用双引号
       'vue/max-attributes-per-line': [
         'error',
@@ -255,6 +256,7 @@ export default defineConfig([
       'vue/quote-props': ['error', 'consistent-as-needed'], // 对象属性引号一致性
       'vue/space-in-parens': ['error', 'never'], // 圆括号内不允许空格
       'vue/template-curly-spacing': 'error', // 模板字符串大括号间距
+      'vue/comment-directive': 'off', // 关闭注释指令检查（不关闭的话目前 template、script、style 结尾标签都会莫名其妙报错，暂时还未找到解决方案。）
     },
   },
 ])
