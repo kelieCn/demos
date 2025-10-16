@@ -10,7 +10,7 @@
   "keywords": [],
   "engines": {
     "node": ">=18.19",
-    "pnpm": ">=8.15.0 <9.0.0"
+    "pnpm": ">=8.15.0 <10.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
