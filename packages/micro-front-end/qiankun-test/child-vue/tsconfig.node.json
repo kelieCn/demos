@@ -11,8 +11,5 @@
     "outDir": "./dist",
     "rootDir": "./"
   },
-  "include": ["webpack.config.ts"],
-  "ts-node": {
-    "transpileOnly": true
-  }
+  "include": ["webpack.config.js"]
 }

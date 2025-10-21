@@ -11,19 +11,34 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vue": "*"
+    "ant-design-vue": "*",
+    "vue": "*",
+    "vue-router": "*"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@babel/runtime": "*",
     "@types/node": "*",
     "@types/webpack": "*",
+    "@vue/babel-plugin-jsx": "*",
     "@vue/tsconfig": "*",
+    "babel-loader": "*",
+    "clean-webpack-plugin": "*",
+    "css-loader": "*",
+    "html-webpack-plugin": "*",
+    "mini-css-extract-plugin": "*",
+    "sass": "*",
+    "sass-loader": "*",
+    "ts-loader": "*",
+    "ts-node": "*",
     "typescript": "*",
     "vite": "*",
+    "vue-loader": "*",
     "vue-tsc": "*",
-    "ts-node": "*",
     "webpack": "*",
     "webpack-cli": "*",
-    "webpack-dev-server": "*",
-    "html-webpack-plugin": "*"
+    "webpack-dev-server": "*"
   }
 }
