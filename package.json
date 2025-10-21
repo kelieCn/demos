@@ -21,11 +21,17 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
+    "ant-design-vue": "4.x",
     "qiankun": "^2.10.16",
     "vue": "^3.5.13",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/plugin-transform-runtime": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-typescript": "^7.27.1",
+    "@babel/runtime": "^7.28.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@fastify/cors": "^11.1.0",
@@ -34,8 +40,8 @@
     "@typescript-eslint/eslint-plugin": "^8.44.1",
     "@typescript-eslint/parser": "^8.44.1",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/babel-plugin-jsx": "^2.0.1",
     "@vue/tsconfig": "^0.8.1",
-    "ant-design-vue": "4.x",
     "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
