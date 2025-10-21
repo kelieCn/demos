@@ -1,0 +1,29 @@
+{
+  "name": "child-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@types/webpack": "*",
+    "@vue/tsconfig": "*",
+    "typescript": "*",
+    "vite": "*",
+    "vue-tsc": "*",
+    "ts-node": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*",
+    "html-webpack-plugin": "*"
+  }
+}

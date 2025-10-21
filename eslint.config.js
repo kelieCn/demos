@@ -15,7 +15,7 @@ export default defineConfig([
   {
     name: 'common-rules',
     files: [
-      '**/*.html', '**/*.js', '**/*.ts', '**/*.vue',
+      '**/*.html', '**/*.js', '**/*.ts', '**/*.tsx', '**/*.jsx', '**/*.vue',
     ],
     plugins: {
       html, // HTML 插件用于解析 script 标签
@@ -86,7 +86,9 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.ts', '**/*.vue'], // TypeScript 文件
+    files: [
+      '**/*.ts', '**/*.tsx', '**/*.vue',
+    ], // TypeScript 文件
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 'latest',
