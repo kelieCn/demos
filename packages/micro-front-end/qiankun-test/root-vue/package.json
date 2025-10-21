@@ -1,0 +1,22 @@
+{
+  "name": "root-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@vitejs/plugin-vue": "*",
+    "@vue/tsconfig": "*",
+    "typescript": "*",
+    "vite": "*",
+    "vue-tsc": "*"
+  }
+}
