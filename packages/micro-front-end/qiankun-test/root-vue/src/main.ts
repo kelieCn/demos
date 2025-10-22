@@ -16,7 +16,7 @@ createApp(App).use(router).mount('#app')
 registerMicroApps([
   {
     name: 'vue app',
-    entry: '//localhost:3001/src/main.ts',
+    entry: '//localhost:3001',
     container: '#child-container',
     activeRule: '/vue',
   },
@@ -28,4 +28,4 @@ registerMicroApps([
   },
 ])
 
-start()
+start({ prefetch: false })

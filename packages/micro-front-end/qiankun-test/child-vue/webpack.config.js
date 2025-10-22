@@ -1,8 +1,10 @@
 const path = require('path')
+const { DefinePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const config = {
   entry: './src/main.ts',
@@ -24,6 +26,17 @@ const config = {
     }),
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      async: true,
+      typescript: {
+        extensions: { vue: true },
+      },
+    }),
+    new DefinePlugin({
+      __VUE_PROD_DEVTOOLS__: 'false',
+      __VUE_OPTIONS_API__: 'false',
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'true',
+    }),
   ],
   module: {
     rules: [
@@ -80,14 +93,6 @@ const config = {
               plugins: ['@babel/plugin-transform-runtime', '@vue/babel-plugin-jsx'],
             },
           },
-          {
-            loader: 'ts-loader',
-            options: {
-              appendTsSuffixTo: [/\.vue$/], // 为 .vue 文件添加 .ts 后缀
-              appendTsxSuffixTo: [/\.vue$/], // 为 .vue 文件添加 .tsx 后缀
-              transpileOnly: true, // 只进行转译，不进行类型检查
-            },
-          },
         ],
       },
       {
@@ -106,6 +111,9 @@ const config = {
   },
   devServer: {
     port: 3001,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
 }
 
