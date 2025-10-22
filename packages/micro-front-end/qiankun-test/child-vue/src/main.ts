@@ -1,8 +1,8 @@
+import './public-path'
 import type { App as VueApp } from 'vue'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import 'ant-design-vue/dist/reset.css'
-import './index.scss'
 import App from './App.vue'
 
 let app: VueApp<Element> | null = null
@@ -10,8 +10,19 @@ let app: VueApp<Element> | null = null
 function render(props: { container?: Element } = {}) {
   const { container } = props
   const router = createRouter({
-    history: createWebHistory(),
-    routes: [],
+    history: createWebHistory(container ? '/vue' : '/'),
+    routes: [
+      {
+        path: '/',
+        name: 'CardList',
+        component: () => import('./CardList.vue'),
+      },
+      {
+        path: '/detail/:index',
+        name: 'CardDetail',
+        component: () => import('./CardDetail.vue'),
+      },
+    ],
   })
   app = createApp(App)
   app.use(router)

@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <h1>Child Vue</h1>
+  <div class="app-container">
+    <RouterView />
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
 <style scoped lang="scss">
-
+  .app-container {
+    padding: 20px;
+  }
 </style>

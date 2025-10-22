@@ -17,6 +17,7 @@ const config = {
       type: 'umd',
     },
     chunkLoadingGlobal: 'webpackJsonp_childVue',
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({ template: 'index.html' }),
@@ -97,7 +98,7 @@ const config = {
       },
       {
         test: /\.vue$/,
-        use: 'vue-loader',
+        loader: 'vue-loader',
       },
     ],
   },
@@ -114,6 +115,9 @@ const config = {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    client: { overlay: false },
+    // 不配置上这个字段，history 模式路由跳转后刷新页面会返回 404
+    historyApiFallback: true,
   },
 }
 

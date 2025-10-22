@@ -25,12 +25,13 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { useRouter } from 'vue-router'
+  import { ref, watch } from 'vue'
+  import { useRouter, useRoute } from 'vue-router'
   import type { ItemType , MenuProps } from 'ant-design-vue'
   import { Layout, LayoutHeader, LayoutSider, LayoutContent, Menu, TypographyTitle } from 'ant-design-vue'
 
   const router = useRouter()
+  const route = useRoute()
   const selectedKeys = ref<string[]>([])
   const items: ItemType[] = [
     {
@@ -48,6 +49,14 @@
   function onSelected({ key }: Parameters<NonNullable<MenuProps['onSelect']>>[0]) {
     router.push(`/${key}`)
   }
+
+  watch(() => route.path, val => {
+    if (val.startsWith('/vue')) {
+      selectedKeys.value = ['vue']
+    } else if (val.startsWith('/react')) {
+      selectedKeys.value = ['react']
+    }
+  }, { immediate: true })
 </script>
 
 <style scoped lang="scss">
