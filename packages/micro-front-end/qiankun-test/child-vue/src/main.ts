@@ -1,12 +1,13 @@
+import type { App as VueApp } from 'vue'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import 'ant-design-vue/dist/reset.css'
 import './index.scss'
 import App from './App.vue'
 
-let app: any = null
+let app: VueApp<Element> | null = null
 
-function render(props: any = {}) {
+function render(props: { container?: Element } = {}) {
   const { container } = props
   const router = createRouter({
     history: createWebHistory(),
@@ -14,11 +15,11 @@ function render(props: any = {}) {
   })
   app = createApp(App)
   app.use(router)
-  app.mount(container ? container.querySelector('#app') : '#app')
+  app.mount(container ? container.querySelector('#vue-app')! : '#vue-app')
 }
 
 // 独立运行时
-if (!(window as any).__POWERED_BY_QIANKUN__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   render()
 }
 

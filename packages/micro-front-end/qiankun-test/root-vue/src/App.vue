@@ -17,9 +17,7 @@
           />
         </LayoutSider>
         <Layout>
-          <LayoutContent class="root-content">
-            <div id="child-container" />
-          </LayoutContent>
+          <LayoutContent id="child-container" class="root-content" />
         </Layout>
       </Layout>
     </Layout>
