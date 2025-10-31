@@ -2,7 +2,6 @@
   "name": "child-vue",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack"
@@ -34,7 +33,6 @@
     "ts-loader": "*",
     "ts-node": "*",
     "typescript": "*",
-    "vite": "*",
     "vue-loader": "*",
     "vue-tsc": "*",
     "webpack": "*",

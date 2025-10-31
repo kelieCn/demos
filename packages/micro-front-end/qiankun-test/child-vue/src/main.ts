@@ -10,7 +10,7 @@ let app: VueApp<Element> | null = null
 function render(props: { container?: Element } = {}) {
   const { container } = props
   const router = createRouter({
-    history: createWebHistory(container ? '/vue' : '/'),
+    history: createWebHistory(window.__POWERED_BY_QIANKUN__ ? '/vue' : '/'),
     routes: [
       {
         path: '/',
