@@ -14,7 +14,7 @@
           <template #cover>
             <img alt="example" :src="url">
           </template>
-          <CardMeta title="Card title" description="This is the description">
+          <CardMeta title="Vue title" description="This is the description">
             <template #avatar>
               <Avatar :src="avatar" />
             </template>
