@@ -213,6 +213,18 @@ importers:
         specifier: '*'
         version: 5.9.3
 
+  packages/mcp/server/by-native:
+    devDependencies:
+      '@types/node':
+        specifier: '*'
+        version: 22.18.10
+      ts-node:
+        specifier: '*'
+        version: 10.9.2(@types/node@22.18.10)(typescript@5.9.3)
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+
   packages/micro-front-end/qiankun-test/child-react:
     dependencies:
       ant:

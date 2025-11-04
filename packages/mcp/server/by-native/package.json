@@ -1,0 +1,14 @@
+{
+  "name": "by-native",
+  "type": "module",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "ts-node --esm server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  }
+}
