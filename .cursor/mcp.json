@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "by-sdk": {
+      "command": "ts-node",
+      "args": ["/Users/kelie/Documents/study/demos/packages/mcp/server/by-sdk/server.ts"],
+      "env": {
+        "TRANSPORT": "stdio"
+      }
+    }
+  }
+}

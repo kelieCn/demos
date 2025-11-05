@@ -21,14 +21,21 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@modelcontextprotocol/sdk": "^1.21.0",
     "ant-design-vue": "4.x",
     "antd": "^5.27.6",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "fastify": "^5.3.2",
     "qiankun": "^2.10.16",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router": "^7.9.5",
     "vue": "^3.5.13",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "zod": "^3.23"
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
@@ -39,7 +46,8 @@
     "@babel/runtime": "^7.28.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@fastify/cors": "^11.1.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
     "@types/node": "^22.15.3",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
@@ -57,7 +65,6 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-unused-imports": "^4.2.0",
     "eslint-plugin-vue": "^10.5.0",
-    "fastify": "^5.3.2",
     "fork-ts-checker-webpack-plugin": "^9.1.0",
     "html-webpack-plugin": "^5.6.4",
     "husky": "^9.1.7",

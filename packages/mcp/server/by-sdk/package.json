@@ -1,0 +1,26 @@
+{
+  "name": "by-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:stdio": "TRANSPORT=stdio ts-node server.ts",
+    "dev:streamableHttp": "TRANSPORT=streamableHttp ts-node server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "zod": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  }
+}
