@@ -18,7 +18,8 @@
     "lint:fix": "eslint --fix",
     "prepare": "husky",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "check-env": "ts-node check-env-secrets.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
@@ -29,6 +30,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "fastify": "^5.3.2",
+    "openai": "^6.8.1",
     "qiankun": "^2.10.16",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
