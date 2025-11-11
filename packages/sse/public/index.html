@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSE demo</title>
+</head>
+<body>
+  <script>
+    const eventSource = new EventSource('http://localhost:3000/sse', {
+      withCredentials: true,
+    })
+
+    eventSource.addEventListener('connected', (event) => {
+      console.log('connected', event)
+    })
+
+    eventSource.addEventListener('resource_changed', (event) => {
+      console.log('resource_changed', event)
+    })
+
+    eventSource.addEventListener('error', (event) => {
+      console.log('error', event)
+    })
+  </script>
+</body>
+</html>
