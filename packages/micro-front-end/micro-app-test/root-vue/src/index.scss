@@ -1,0 +1,11 @@
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+// 由于 micro-app 开启的样式隔离方式是在子应用的样式中插入一些前缀，所以对于基座上的样式，仍然能够影响到子应用
+#vue-app,
+#react-app,
+#vite-app {
+  background-color: bisque;
+}

@@ -5,7 +5,6 @@ import 'ant-design-vue/dist/reset.css'
 import './index.scss'
 import App from './App.vue'
 
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [],

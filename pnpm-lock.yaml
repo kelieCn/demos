@@ -14,6 +14,9 @@ importers:
       '@fastify/static':
         specifier: ^8.3.0
         version: 8.3.0
+      '@micro-zoe/micro-app':
+        specifier: 1.0.0-rc.27
+        version: 1.0.0-rc.27
       '@modelcontextprotocol/sdk':
         specifier: ^1.21.0
         version: 1.21.0
@@ -305,6 +308,232 @@ importers:
         specifier: '*'
         version: 5.9.3
 
+  packages/micro-front-end/micro-app-test/child-react:
+    dependencies:
+      ant:
+        specifier: '*'
+        version: 0.2.0
+      react:
+        specifier: '*'
+        version: 19.2.0
+      react-dom:
+        specifier: '*'
+        version: 19.2.0(react@19.2.0)
+      react-router:
+        specifier: '*'
+        version: 7.9.5(react-dom@19.2.0)(react@19.2.0)
+    devDependencies:
+      '@babel/plugin-transform-runtime':
+        specifier: '*'
+        version: 7.28.3(@babel/core@7.28.4)
+      '@babel/preset-env':
+        specifier: '*'
+        version: 7.28.3(@babel/core@7.28.4)
+      '@babel/preset-typescript':
+        specifier: '*'
+        version: 7.27.1(@babel/core@7.28.4)
+      '@babel/runtime':
+        specifier: '*'
+        version: 7.28.4
+      '@types/node':
+        specifier: '*'
+        version: 22.18.10
+      '@types/react':
+        specifier: '*'
+        version: 19.2.2
+      '@types/react-dom':
+        specifier: '*'
+        version: 19.2.2(@types/react@19.2.2)
+      '@types/webpack':
+        specifier: '*'
+        version: 5.28.5(webpack-cli@6.0.1)
+      babel-loader:
+        specifier: '*'
+        version: 10.0.0(@babel/core@7.28.4)(webpack@5.102.1)
+      clean-webpack-plugin:
+        specifier: '*'
+        version: 4.0.0(webpack@5.102.1)
+      css-loader:
+        specifier: '*'
+        version: 7.1.2(webpack@5.102.1)
+      html-webpack-plugin:
+        specifier: '*'
+        version: 5.6.4(webpack@5.102.1)
+      mini-css-extract-plugin:
+        specifier: '*'
+        version: 2.9.4(webpack@5.102.1)
+      sass:
+        specifier: '*'
+        version: 1.93.2
+      sass-loader:
+        specifier: '*'
+        version: 16.0.5(sass-embedded@1.93.2)(sass@1.93.2)(webpack@5.102.1)
+      ts-loader:
+        specifier: '*'
+        version: 9.5.4(typescript@5.9.3)(webpack@5.102.1)
+      ts-node:
+        specifier: '*'
+        version: 10.9.2(@types/node@22.18.10)(typescript@5.9.3)
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+      webpack:
+        specifier: '*'
+        version: 5.102.1(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: '*'
+        version: 6.0.1(webpack-dev-server@5.2.2)(webpack@5.102.1)
+      webpack-dev-server:
+        specifier: '*'
+        version: 5.2.2(webpack-cli@6.0.1)(webpack@5.102.1)
+
+  packages/micro-front-end/micro-app-test/child-vite:
+    dependencies:
+      ant-design-vue:
+        specifier: '*'
+        version: 4.2.6(vue@3.5.22)
+      vue:
+        specifier: '*'
+        version: 3.5.22(typescript@5.9.3)
+      vue-router:
+        specifier: '*'
+        version: 4.6.3(vue@3.5.22)
+    devDependencies:
+      '@types/node':
+        specifier: '*'
+        version: 22.18.10
+      '@vitejs/plugin-vue':
+        specifier: '*'
+        version: 6.0.1(vite@7.1.10)(vue@3.5.22)
+      '@vue/tsconfig':
+        specifier: '*'
+        version: 0.8.1(typescript@5.9.3)(vue@3.5.22)
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+      vite:
+        specifier: '*'
+        version: 7.1.10(@types/node@22.18.10)(sass-embedded@1.93.2)(sass@1.93.2)
+      vue-tsc:
+        specifier: '*'
+        version: 3.1.1(typescript@5.9.3)
+
+  packages/micro-front-end/micro-app-test/child-vue:
+    dependencies:
+      ant-design-vue:
+        specifier: '*'
+        version: 4.2.6(vue@3.5.22)
+      vue:
+        specifier: '*'
+        version: 3.5.22(typescript@5.9.3)
+      vue-router:
+        specifier: '*'
+        version: 4.6.3(vue@3.5.22)
+    devDependencies:
+      '@babel/plugin-transform-runtime':
+        specifier: '*'
+        version: 7.28.3(@babel/core@7.28.4)
+      '@babel/preset-env':
+        specifier: '*'
+        version: 7.28.3(@babel/core@7.28.4)
+      '@babel/preset-typescript':
+        specifier: '*'
+        version: 7.27.1(@babel/core@7.28.4)
+      '@babel/runtime':
+        specifier: '*'
+        version: 7.28.4
+      '@types/node':
+        specifier: '*'
+        version: 22.18.10
+      '@types/webpack':
+        specifier: '*'
+        version: 5.28.5(webpack-cli@6.0.1)
+      '@vue/babel-plugin-jsx':
+        specifier: '*'
+        version: 2.0.1(@babel/core@7.28.4)
+      '@vue/tsconfig':
+        specifier: '*'
+        version: 0.8.1(typescript@5.9.3)(vue@3.5.22)
+      babel-loader:
+        specifier: '*'
+        version: 10.0.0(@babel/core@7.28.4)(webpack@5.102.1)
+      clean-webpack-plugin:
+        specifier: '*'
+        version: 4.0.0(webpack@5.102.1)
+      css-loader:
+        specifier: '*'
+        version: 7.1.2(webpack@5.102.1)
+      html-webpack-plugin:
+        specifier: '*'
+        version: 5.6.4(webpack@5.102.1)
+      mini-css-extract-plugin:
+        specifier: '*'
+        version: 2.9.4(webpack@5.102.1)
+      sass:
+        specifier: '*'
+        version: 1.93.2
+      sass-loader:
+        specifier: '*'
+        version: 16.0.5(sass-embedded@1.93.2)(sass@1.93.2)(webpack@5.102.1)
+      ts-loader:
+        specifier: '*'
+        version: 9.5.4(typescript@5.9.3)(webpack@5.102.1)
+      ts-node:
+        specifier: '*'
+        version: 10.9.2(@types/node@22.18.10)(typescript@5.9.3)
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+      vue-loader:
+        specifier: '*'
+        version: 17.4.2(vue@3.5.22)(webpack@5.102.1)
+      vue-tsc:
+        specifier: '*'
+        version: 3.1.1(typescript@5.9.3)
+      webpack:
+        specifier: '*'
+        version: 5.102.1(webpack-cli@6.0.1)
+      webpack-cli:
+        specifier: '*'
+        version: 6.0.1(webpack-dev-server@5.2.2)(webpack@5.102.1)
+      webpack-dev-server:
+        specifier: '*'
+        version: 5.2.2(webpack-cli@6.0.1)(webpack@5.102.1)
+
+  packages/micro-front-end/micro-app-test/root-vue:
+    dependencies:
+      '@micro-zoe/micro-app':
+        specifier: '*'
+        version: 1.0.0-rc.27
+      ant-design-vue:
+        specifier: '*'
+        version: 4.2.6(vue@3.5.22)
+      vue:
+        specifier: '*'
+        version: 3.5.22(typescript@5.9.3)
+      vue-router:
+        specifier: '*'
+        version: 4.6.3(vue@3.5.22)
+    devDependencies:
+      '@types/node':
+        specifier: '*'
+        version: 22.18.10
+      '@vitejs/plugin-vue':
+        specifier: '*'
+        version: 6.0.1(vite@7.1.10)(vue@3.5.22)
+      '@vue/tsconfig':
+        specifier: '*'
+        version: 0.8.1(typescript@5.9.3)(vue@3.5.22)
+      typescript:
+        specifier: '*'
+        version: 5.9.3
+      vite:
+        specifier: '*'
+        version: 7.1.10(@types/node@22.18.10)(sass-embedded@1.93.2)(sass@1.93.2)
+      vue-tsc:
+        specifier: '*'
+        version: 3.1.1(typescript@5.9.3)
+
   packages/micro-front-end/qiankun-test/child-react:
     dependencies:
       ant:
@@ -468,9 +697,18 @@ importers:
 
   packages/micro-front-end/qiankun-test/root-vue:
     dependencies:
+      ant-design-vue:
+        specifier: '*'
+        version: 4.2.6(vue@3.5.22)
+      qiankun:
+        specifier: '*'
+        version: 2.10.16
       vue:
         specifier: '*'
         version: 3.5.22(typescript@5.9.3)
+      vue-router:
+        specifier: '*'
+        version: 4.6.3(vue@3.5.22)
     devDependencies:
       '@types/node':
         specifier: '*'
@@ -2552,6 +2790,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /@micro-zoe/micro-app@1.0.0-rc.27:
+    resolution: {integrity: sha512-FctYIwS1lfzaduCKHzMB8dpOg1ugGYejeeV+tE7LvLMmmbxRl2HaO4dlydUYu/pTXTFEGMsnNul+6kx/8rfcAQ==}
+    dev: false
+
   /@modelcontextprotocol/sdk@1.21.0:
     resolution: {integrity: sha512-YFBsXJMFCyI1zP98u7gezMFKX4lgu/XpoZJk7ufI6UlFKXLj2hAMUuRlQX/nrmIPOmhRrG6tw2OQ2ZA/ZlXYpQ==}
     engines: {node: '>=18'}
@@ -3096,7 +3338,7 @@ packages:
   /@types/connect-history-api-fallback@1.5.4:
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
     dependencies:
-      '@types/express-serve-static-core': 4.19.7
+      '@types/express-serve-static-core': 5.1.0
       '@types/node': 22.18.10
     dev: true
 
