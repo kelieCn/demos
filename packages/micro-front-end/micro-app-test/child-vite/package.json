@@ -1,5 +1,5 @@
 {
-  "name": "root-vue",
+  "name": "child-vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "ant-design-vue": "*",
-    "qiankun": "*",
     "vue": "*",
     "vue-router": "*"
   },

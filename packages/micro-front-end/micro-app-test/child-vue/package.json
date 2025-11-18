@@ -1,0 +1,42 @@
+{
+  "name": "child-vue",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-design-vue": "*",
+    "vue": "*",
+    "vue-router": "*"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@babel/runtime": "*",
+    "@types/node": "*",
+    "@types/webpack": "*",
+    "@vue/babel-plugin-jsx": "*",
+    "@vue/tsconfig": "*",
+    "babel-loader": "*",
+    "clean-webpack-plugin": "*",
+    "css-loader": "*",
+    "html-webpack-plugin": "*",
+    "mini-css-extract-plugin": "*",
+    "sass": "*",
+    "sass-loader": "*",
+    "ts-loader": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "vue-loader": "*",
+    "vue-tsc": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}

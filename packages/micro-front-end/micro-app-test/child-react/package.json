@@ -1,0 +1,41 @@
+{
+  "name": "child-react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-typescript": "*",
+    "@babel/runtime": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/webpack": "*",
+    "babel-loader": "*",
+    "clean-webpack-plugin": "*",
+    "css-loader": "*",
+    "html-webpack-plugin": "*",
+    "mini-css-extract-plugin": "*",
+    "sass": "*",
+    "sass-loader": "*",
+    "ts-loader": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}
